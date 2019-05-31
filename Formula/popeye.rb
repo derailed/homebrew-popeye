@@ -2,9 +2,9 @@
 class Popeye < Formula
   desc "A Kubernetes Cluster sanitizer and linter."
   homepage "https://imhotep.io/popeye"
-  url "https://github.com/derailed/popeye/releases/download/v0.3.6/popeye_0.3.6_Darwin_x86_64.tar.gz"
-  version "0.3.6"
-  sha256 "fa961b757cbcf91f62ae05c853ea974cd4d28335bc93f9da7e95aea56bd8c340"
+  url "https://github.com/derailed/popeye/releases/download/v0.3.7/popeye_0.3.7_Darwin_x86_64.tar.gz"
+  version "0.3.7"
+  sha256 "cfcce991dac41896ee96abc20dcd65282068ef979091a90b7afaa259891a4a72"
 
   def install
     bin.install "popeye"
