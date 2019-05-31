@@ -4,7 +4,7 @@ class Popeye < Formula
   homepage "https://imhotep.io/popeye"
   url "https://github.com/derailed/popeye/releases/download/v0.3.8/popeye_0.3.8_Darwin_x86_64.tar.gz"
   version "0.3.8"
-  sha256 "ecd88256e9f17941919ee64e2317811465f8a576724ed225bf4ac7c2877bfadd"
+  sha256 "d71f3f62ec3e4b533e8b42d2a41d53ea3b757ea883377a471880f3a27ee08c49"
 
   def install
     bin.install "popeye"
