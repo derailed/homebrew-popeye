@@ -6,10 +6,10 @@ class Popeye < Formula
 
   if OS.mac?
     url "https://github.com/derailed/popeye/releases/download/v0.4.0/popeye_0.4.0_Darwin_x86_64.tar.gz"
-    sha256 "45a492ecc21ca889488b4b97b27b883e911b4288f62d3693622aef05d533c562"
+    sha256 "eb1cd9ceb5582b037813eca3108af01e1edf08ac0da8846876882415a6f4bb43"
   elsif OS.linux?
     url "https://github.com/derailed/popeye/releases/download/v0.4.0/popeye_0.4.0_Linux_x86_64.tar.gz"
-    sha256 "ec9221f5bbc17a438e55e195beb69442ee94e795acd10fb98b7af6a15224d7a1"
+    sha256 "222ef0f5b66b77042d7e0012b93349a2fc4b84ed5a0d2e8db5636bd6c1b46dd7"
   end
 
   def install
