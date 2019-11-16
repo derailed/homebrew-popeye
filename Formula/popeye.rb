@@ -2,14 +2,26 @@
 class Popeye < Formula
   desc "A Kubernetes Cluster sanitizer and linter."
   homepage "https://imhotep.io/popeye"
-  version "0.4.3"
+  version "0.5.0"
+  bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/derailed/popeye/releases/download/v0.4.3/popeye_0.4.3_Darwin_x86_64.tar.gz"
-    sha256 "cb05cdecedf38117fe8f64519812d5231f1c1c87f900c8877f418cf21cdef477"
+    url "https://github.com/derailed/popeye/releases/download/v0.5.0/popeye_0.5.0_Darwin_x86_64.tar.gz"
+    sha256 "de96ac8e3c68a34d5c0f5d8f4b7f5746b28d7225e1cf266066b3cb4f953d42a3"
   elsif OS.linux?
-    url "https://github.com/derailed/popeye/releases/download/v0.4.3/popeye_0.4.3_Linux_x86_64.tar.gz"
-    sha256 "074094a87d6be54e959bb029fed27c899e79e9d6a6a4e18860a0e5ab3c2f3c7b"
+    if Hardware::CPU.intel?
+      url "https://github.com/derailed/popeye/releases/download/v0.5.0/popeye_0.5.0_Linux_x86_64.tar.gz"
+      sha256 "a0c2cf9f4dc3d431cefa79708ea6d3d0eead2b62ac5f5ee70f37cc2d651a62a7"
+    end
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/derailed/popeye/releases/download/v0.5.0/popeye_0.5.0_Linux_arm64.tar.gz"
+        sha256 "4a77b42c3c4862ddc3c9dc0f9a2e0687431fda9f68b0187beebe59bea36bed7e"
+      else
+        url "https://github.com/derailed/popeye/releases/download/v0.5.0/popeye_0.5.0_Linux_armv6.tar.gz"
+        sha256 "689c8effbae5ea4bd57c5ec313c28647c8ea0082f037897a8b1503372dc1689a"
+      end
+    end
   end
 
   def install
