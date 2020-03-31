@@ -7,16 +7,16 @@ class Popeye < Formula
 
   if OS.mac?
     url "https://github.com/derailed/popeye/releases/download/v0.8.0/popeye_Darwin_x86_64.tar.gz"
-    sha256 "cd0203f1c3865a3c52d186e552ee9dd6d3dd0c8389a873dfdad67a40854e4d4f"
+    sha256 "492b1ad183c42a1fbbfca4b535f01e65c01af6f8ffb23f817330c17273b29d4e"
   elsif OS.linux?
     if Hardware::CPU.intel?
       url "https://github.com/derailed/popeye/releases/download/v0.8.0/popeye_Linux_x86_64.tar.gz"
-      sha256 "b644bf45aa9db4a3fcb83107a48c06962fc9e819659e3e6b761e675ec93fdace"
+      sha256 "f06da4264d02a0cdda25b35c32c584e1086c86052b8fb89dcc37466bf8db3360"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
         url "https://github.com/derailed/popeye/releases/download/v0.8.0/popeye_Linux_arm64.tar.gz"
-        sha256 "35189f95208dc3c4b885f10395dbbf5179c8d532ce0a90a45bcb1029f894445c"
+        sha256 "9cd9d63c355533dc40663dffcf34d486c896c2bdc1f23ebd1e2e453ec98fd56d"
       else
       end
     end
