@@ -6,7 +6,6 @@ class Popeye < Formula
   desc "A Kubernetes Cluster sanitizer and linter."
   homepage "https://imhotep.io/popeye"
   version "0.9.7"
-  bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/derailed/popeye/releases/download/v0.9.7/popeye_Darwin_x86_64.tar.gz"
