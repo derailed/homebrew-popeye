@@ -5,28 +5,44 @@
 class Popeye < Formula
   desc "A Kubernetes Cluster sanitizer and linter."
   homepage "https://imhotep.io/popeye"
-  version "0.9.7"
-  bottle :unneeded
+  version "0.9.8"
 
-  if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/derailed/popeye/releases/download/v0.9.7/popeye_Darwin_x86_64.tar.gz"
-    sha256 "ced19ec058f13a06fb072d8960757c4768bc4c1f4671b986195e538ff65642d2"
-  end
-  if OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/derailed/popeye/releases/download/v0.9.7/popeye_Darwin_arm64.tar.gz"
-    sha256 "b90cc43ef2161ea99fc5242cfc4d28b5e770ded1b1dfcf98feacc4d3365ba21d"
-  end
-  if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/derailed/popeye/releases/download/v0.9.7/popeye_Linux_x86_64.tar.gz"
-    sha256 "2506a776a62d70c948a4cf1f70bdbbad0c99fb7f6f0f9e0753f23c2e3bcbdb71"
-  end
-  if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/derailed/popeye/releases/download/v0.9.7/popeye_Linux_arm64.tar.gz"
-    sha256 "021773468d7cdc0ef2f9ea343973e7a3d581505e1bc9c1a4014d0934cd7ac12c"
+  on_macos do
+    if Hardware::CPU.arm?
+      url "https://github.com/derailed/popeye/releases/download/v0.9.8/popeye_Darwin_arm64.tar.gz"
+      sha256 "dc8856d9d05c79246317762412e44d6c34d847a7eaa8c1e182424cec38338b62"
+
+      def install
+        bin.install "popeye"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/derailed/popeye/releases/download/v0.9.8/popeye_Darwin_x86_64.tar.gz"
+      sha256 "0c7880aad5e0a1efbd833641ab9309a0e4d5b7725ef0510f40d7de61a658f76f"
+
+      def install
+        bin.install "popeye"
+      end
+    end
   end
 
-  def install
-    bin.install "popeye"
+  on_linux do
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/derailed/popeye/releases/download/v0.9.8/popeye_Linux_arm64.tar.gz"
+      sha256 "a54e5da3bbf3b2216518476a340ffa322164f701ec23ca7fe17c21ccb5421241"
+
+      def install
+        bin.install "popeye"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/derailed/popeye/releases/download/v0.9.8/popeye_Linux_x86_64.tar.gz"
+      sha256 "b8407ab3b5c450e26f9323ff3bc42c8623f8f54e733dfd1c12b3fc8be06f58ba"
+
+      def install
+        bin.install "popeye"
+      end
+    end
   end
 
   test do
