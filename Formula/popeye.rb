@@ -5,20 +5,20 @@
 class Popeye < Formula
   desc "A Kubernetes Cluster sanitizer and linter."
   homepage "https://imhotep.io/popeye"
-  version "0.9.8"
+  version "0.10.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/derailed/popeye/releases/download/v0.9.8/popeye_Darwin_arm64.tar.gz"
-      sha256 "dc8856d9d05c79246317762412e44d6c34d847a7eaa8c1e182424cec38338b62"
+      url "https://github.com/derailed/popeye/releases/download/v0.10.0/popeye_Darwin_arm64.tar.gz"
+      sha256 "b1ae1eb41d306c3f2d1df78fc464f4bc10abcada11e82983ee1148b963b605e0"
 
       def install
         bin.install "popeye"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/derailed/popeye/releases/download/v0.9.8/popeye_Darwin_x86_64.tar.gz"
-      sha256 "0c7880aad5e0a1efbd833641ab9309a0e4d5b7725ef0510f40d7de61a658f76f"
+      url "https://github.com/derailed/popeye/releases/download/v0.10.0/popeye_Darwin_x86_64.tar.gz"
+      sha256 "c15ad3dd470ffe68fc260a04e319ee58a67a7472c1b96358822a2a0935cb7bc7"
 
       def install
         bin.install "popeye"
@@ -28,16 +28,16 @@ class Popeye < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/derailed/popeye/releases/download/v0.9.8/popeye_Linux_arm64.tar.gz"
-      sha256 "a54e5da3bbf3b2216518476a340ffa322164f701ec23ca7fe17c21ccb5421241"
+      url "https://github.com/derailed/popeye/releases/download/v0.10.0/popeye_Linux_arm64.tar.gz"
+      sha256 "fc66d0b27ac338f778a2fdf3169cbfb56f03d2155a327183b66674448aca2769"
 
       def install
         bin.install "popeye"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/derailed/popeye/releases/download/v0.9.8/popeye_Linux_x86_64.tar.gz"
-      sha256 "b8407ab3b5c450e26f9323ff3bc42c8623f8f54e733dfd1c12b3fc8be06f58ba"
+      url "https://github.com/derailed/popeye/releases/download/v0.10.0/popeye_Linux_x86_64.tar.gz"
+      sha256 "ba5078cd694870947e025dc377f0772441490c2a86d20220a8d541f1572af2c4"
 
       def install
         bin.install "popeye"
