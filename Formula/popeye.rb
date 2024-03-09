@@ -9,16 +9,16 @@ class Popeye < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/derailed/popeye/releases/download/v0.21.0/popeye_ v0.21.0_ darwin_arm64.tar.gz"
-      sha256 "e39db979c152a14e913e9f80da82351665e62cc210ed962fffd34ca38dc1a6d5"
+      url "https://github.com/derailed/popeye/releases/download/v0.21.0/popeye_darwin_arm64.tar.gz"
+      sha256 "b0543528de4dbbaac4b56c4a03942c2c0480bd3a597f4a4a5862d0442a72954c"
 
       def install
         bin.install "popeye"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/derailed/popeye/releases/download/v0.21.0/popeye_ v0.21.0_ darwin_amd64.tar.gz"
-      sha256 "dc6e7f2ba8d579be54d43f6b9cb4cb3693e808fcff11c3ead111c2f2a410d169"
+      url "https://github.com/derailed/popeye/releases/download/v0.21.0/popeye_darwin_amd64.tar.gz"
+      sha256 "9187861426964f1be5b3e1d0578ab03b0595f7b9bef72e3eedcac6f59a0b486c"
 
       def install
         bin.install "popeye"
@@ -28,16 +28,16 @@ class Popeye < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/derailed/popeye/releases/download/v0.21.0/popeye_ v0.21.0_ linux_arm64.tar.gz"
-      sha256 "b36a901fe5138fab411ac97533f9ff0598730d797efcf358aad51116f280c94d"
+      url "https://github.com/derailed/popeye/releases/download/v0.21.0/popeye_linux_arm64.tar.gz"
+      sha256 "7a457b8bfe51abf4386d8854a9698dcf73856d6b3e4a0bf74645ddeb25e6784e"
 
       def install
         bin.install "popeye"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/derailed/popeye/releases/download/v0.21.0/popeye_ v0.21.0_ linux_amd64.tar.gz"
-      sha256 "181f453cfabd1fedabe9cd298200cedfa4d5cb833061b7bf711ac3827ad98748"
+      url "https://github.com/derailed/popeye/releases/download/v0.21.0/popeye_linux_amd64.tar.gz"
+      sha256 "ece39c5ec6947bab6f481fa53e08c47d12574227c1b485516bf7c0d513bc2da4"
 
       def install
         bin.install "popeye"
