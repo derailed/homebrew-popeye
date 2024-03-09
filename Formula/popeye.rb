@@ -5,20 +5,20 @@
 class Popeye < Formula
   desc "A Kubernetes Cluster sanitizer and linter."
   homepage "https://imhotep.io/popeye"
-  version "0.20.5"
+  version "0.21.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/derailed/popeye/releases/download/v0.20.5/popeye_Darwin_arm64.tar.gz"
-      sha256 "c794a0edae3546827dbec6db18469193f8a70cfcfaf095a44ca329b079960273"
+      url "https://github.com/derailed/popeye/releases/download/v0.21.0/popeye_ v0.21.0_ darwin_arm64.tar.gz"
+      sha256 "e39db979c152a14e913e9f80da82351665e62cc210ed962fffd34ca38dc1a6d5"
 
       def install
         bin.install "popeye"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/derailed/popeye/releases/download/v0.20.5/popeye_Darwin_amd64.tar.gz"
-      sha256 "30076882921607345beb9fd2bfb44bd6ef05de51ef772e333ff6bd97b58609d5"
+      url "https://github.com/derailed/popeye/releases/download/v0.21.0/popeye_ v0.21.0_ darwin_amd64.tar.gz"
+      sha256 "dc6e7f2ba8d579be54d43f6b9cb4cb3693e808fcff11c3ead111c2f2a410d169"
 
       def install
         bin.install "popeye"
@@ -28,16 +28,16 @@ class Popeye < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/derailed/popeye/releases/download/v0.20.5/popeye_Linux_arm64.tar.gz"
-      sha256 "efcf44842f801f8fa08b5be575b09135bce63cf09da07a3213437194f3cadcb3"
+      url "https://github.com/derailed/popeye/releases/download/v0.21.0/popeye_ v0.21.0_ linux_arm64.tar.gz"
+      sha256 "b36a901fe5138fab411ac97533f9ff0598730d797efcf358aad51116f280c94d"
 
       def install
         bin.install "popeye"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/derailed/popeye/releases/download/v0.20.5/popeye_Linux_amd64.tar.gz"
-      sha256 "c2022a4ca7dd0b6062c5c87524bd6274519686f66534b6261be617dba97c5ecd"
+      url "https://github.com/derailed/popeye/releases/download/v0.21.0/popeye_ v0.21.0_ linux_amd64.tar.gz"
+      sha256 "181f453cfabd1fedabe9cd298200cedfa4d5cb833061b7bf711ac3827ad98748"
 
       def install
         bin.install "popeye"
