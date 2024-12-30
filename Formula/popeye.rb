@@ -5,20 +5,20 @@
 class Popeye < Formula
   desc "A Kubernetes Cluster sanitizer and linter!"
   homepage "https://imhotep.io/popeye"
-  version "0.21.5"
+  version "0.21.6"
 
   on_macos do
-    on_intel do
-      url "https://github.com/derailed/popeye/releases/download/v0.21.5/popeye_darwin_amd64.tar.gz"
-      sha256 "1324030a4982d37d98ec7415d8f3b170432315e100eaced66d3708b70d400f17"
+    if Hardware::CPU.intel?
+      url "https://github.com/derailed/popeye/releases/download/v0.21.6/popeye_darwin_amd64.tar.gz"
+      sha256 "c4afe57a53e9e3460f22d0fc229c53d979d2cb1a3b0a1eed8483de1381044164"
 
       def install
         bin.install "popeye"
       end
     end
-    on_arm do
-      url "https://github.com/derailed/popeye/releases/download/v0.21.5/popeye_darwin_arm64.tar.gz"
-      sha256 "5c6239ce4bde850497caf6146e310f0e33a27eae4f520592ca30544099db2a08"
+    if Hardware::CPU.arm?
+      url "https://github.com/derailed/popeye/releases/download/v0.21.6/popeye_darwin_arm64.tar.gz"
+      sha256 "2ee9d5a4ba0bacc27cb3debee31b1dd0d5a41405315d4c2b3d1dfa209f8d9786"
 
       def install
         bin.install "popeye"
@@ -27,20 +27,20 @@ class Popeye < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/derailed/popeye/releases/download/v0.21.5/popeye_linux_amd64.tar.gz"
-        sha256 "d9e3cb7f2c697c2db5eedfde2295cec13c731111411b8764a649baec635e92d6"
+        url "https://github.com/derailed/popeye/releases/download/v0.21.6/popeye_linux_amd64.tar.gz"
+        sha256 "e212aece0ad755e4773fc602d73662c937777f63b46585947f8380b115ce4dab"
 
         def install
           bin.install "popeye"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/derailed/popeye/releases/download/v0.21.5/popeye_linux_arm64.tar.gz"
-        sha256 "fd0ddea93e825c7e215375e536656e4ae35ee3f0aa1562173b301762bb5abc58"
+        url "https://github.com/derailed/popeye/releases/download/v0.21.6/popeye_linux_arm64.tar.gz"
+        sha256 "bb393e7f7786851f9f25529598a51fa475665cb48d63a31b4875e23e5f249fa1"
 
         def install
           bin.install "popeye"
